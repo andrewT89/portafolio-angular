@@ -1,1 +1,66 @@
 /* You can add global styles to this file, and also import other style files */
+
+
+/* SVG Animation loading */
+
+body {
+    padding: 1em;
+    background: white;
+    color: #777;
+    text-align: center;
+    font-family: "Gill sans", sans-serif;
+    width: 80%;
+    margin: 0 auto;
+}
+
+
+/*
+    Color del Loading
+  */
+
+svg path,
+svg rect {
+    fill: black;
+}
+
+
+/* Animations */
+
+.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@media (prefers-reduced-motion) {
+    .animated {
+        -webkit-animation: unset !important;
+        animation: unset !important;
+        -webkit-transition: none !important;
+        transition: none !important;
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fadeIn {
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+}
